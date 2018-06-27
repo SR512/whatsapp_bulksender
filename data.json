@@ -1,0 +1,19 @@
+{
+  "student":[
+    {
+      "name":"sanjay",
+      "mark":"100",
+      "id":"15SOECA23020"
+    },
+    {
+      "name":"RAM",
+      "mark":"150",
+      "id":"15SOECA23021"
+    },
+    {
+      "name":"SHUBHAMM",
+      "mark":"120",
+      "id":"15SOECA23023"
+    },
+  ]
+}

@@ -1,0 +1,123 @@
+{% extends "index.Jinja2" %}
+{% block content %}
+
+    <div class="container-fluid" xmlns="http://www.w3.org/1999/html">
+        <div class="row bg-title">
+
+            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                <h4 class="page-title">DashBoard</h4>
+            </div>
+        </div>
+
+          <div class="panel panel-primary">
+            <div class="panel-heading">Upload Contact Excel</div>
+            <div class="panel-body">
+
+                <form action="/sendMedia" method="post" class="form-horizontal" enctype="multipart/form-data">
+
+                   <div class="form-group">
+                        <label for="email" class="col-md-4 control-label">Select Contact File:</label>
+
+                        <div class="col-md-6">
+                            <input type="file" class="form-control" name="file">
+                        </div>
+                    </div>
+
+                     <div class="form-group">
+                        <label for="email" class="col-md-4 control-label">Select Media File:</label>
+
+                        <div class="col-md-6">
+                            <input type="file" class="form-control" name="media">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+
+                        <label class="col-md-4 control-label">Add Caption</label>
+
+                        <div class="col-md-6">
+                        <span class="help-block">
+                            <strong></strong>
+                                    </span>
+                            <textarea class="form-control" name="caption" placeholder="Type here to see how it work"
+                                      maxlength="100"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-6 col-md-offset-4">
+                            <button type="submit" class="btn btn-success">
+                                Start To Send
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+{##}
+    {#    <button type="button" id="btnPress">Open Whatsapp web</button>#}
+    {##}
+    {#    <div class="container">#}
+    {#        <div class="jumbotron">#}
+    {#            <h1>Step 2 Scan Qr Code</h1>#}
+    {#            <br/>#}
+    {#            <p class="text-center">#}
+    {#                Step : 1 Open WhatsApp on your phone<br/>#}
+    {#                Step : 2 Tap Menu or Settings and Select Whatsapp Web<br/>#}
+    {#                Step : 3 Point your phone to this screen to capture the code#}
+    {#            </p>#}
+    {#        </div>#}
+    {#    </div>#}
+    {##}
+    {#    <div class="container">#}
+    {#        <div class="jumbotron">#}
+    {#            <h1>Step 3 Select Option</h1>#}
+    {#            <br/>#}
+    {#            <p class="text-center">#}
+    {#                <select name="type" id="type">#}
+    {#                    <option value="0">Select - Method</option>#}
+    {#                    <option value="1">Text Message</option>#}
+    {#                    <option value="2">MultiMedia Message</option>#}
+    {#                </select>#}
+    {#            </p>#}
+    {#        </div>#}
+    {#    </div>#}
+    {##}
+    {#    <div class="container" id="text">#}
+    {#        <div class="jumbotron">#}
+    {#            <h1>Text Message</h1>#}
+    {#            <br/>#}
+    {#             <form action="{{ url_for('webs.sendText') }}" method="POST" enctype="multipart/form-data">#}
+    {#            <p class="text-center">#}
+    {#                <input type="file" class="form-control" name="selectfile">#}
+    {#                <br/>#}
+    {#                <textarea name="msg" class="form-control" rows="5" placeholder="Enter Your Msg">#}
+    {#               </textarea>#}
+    {#            </p>#}
+    {#            <button type="submit" class="btn btn-success" id="btnTxtSend">Send</button>#}
+    {#             </form>#}
+    {#        </div>#}
+    {#    </div>#}
+    {##}
+    {#    <div class="container" id="MultiMedia">#}
+    {#        <div class="jumbotron">#}
+    {#            <h1>Multi Media Message</h1>#}
+    {#            <br/>#}
+    {#            <form action="{{ url_for('webs.sendText') }}" method="POST" enctype="multipart/form-data">#}
+    {#             <label>Contact File</label>#}
+    {#            <input type="file" class="form-control" name="selectMulti">#}
+    {#            <br>#}
+    {#            <label>Multi Media (Image,apk,pdf,docs,excel etc..)</label>#}
+    {#            <p class="text-center">#}
+    {#                <input type="file" class="form-control" name="img">#}
+    {#            </p>#}
+    {#              <button type="submit" class="btn btn-success" id="btnMulSend">Send</button>#}
+    {#         </div>#}
+    {#            </form>#}
+    {##}
+    {#    </div>#}
+
+{% endblock %}
+
